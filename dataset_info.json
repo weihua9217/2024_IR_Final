@@ -8,8 +8,8 @@
   "alpaca_zh_demo": {
     "file_name": "alpaca_zh_demo.json"
   },
-  "law_data": {
-    "file_name": "law_data.json"
+  "law_data_step2": {
+    "file_name": "law_data_step2.json"
   },
   "law_data_step1": {
     "file_name": "law_data_step1.json"

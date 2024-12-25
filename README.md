@@ -34,11 +34,12 @@ Put all of them under data directory so you should get:
     ├──LLaMA-Factory/
 
 ```
-- Using `arrage_train_step1.ipynb` to prepare Training Data.
 - Using `law_process.ipynb` to generate law.json.
+- Using `arrage_train_step1.ipynb` to prepare Training Data for step1.
+- Using `arrage_train_step2.ipynb` to prepare Training Data for step2.
 
 
-# Training and Merge LoRA
+# Training and Merge LoRA for stage 1
 
 - Place `law_data_step1.json` and `dataset_info.json` under your `LLaMA-Factory/data`
 - Place `train_lora/taiwanllm_lora_sft.yaml` under your `LLaMA-Factory/examples/train_lora`
@@ -50,5 +51,18 @@ llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
 llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
+# Training and Merge LoRA for stage 2
+
+- Place `law_data_step2.json` under your `LLaMA-Factory/data`
+- Place `train_lora/taiwanllm_lora_sft_stage2.yaml` under your `LLaMA-Factory/examples/train_lora`
+- Place `merge_lora/taiwanllm_lora_sft_stage2.yaml` under your `LLaMA-Factory/examples/merge_lora`
+
+```
+cd LLaMA-Factory
+llamafactory-cli train examples/train_lora/llama3_lora_sft_stage2.yaml
+llamafactory-cli export examples/merge_lora/llama3_lora_sft_stage2.yaml
+```
+
 # Inference
-- Use `inference_step1.ipynb` to generate final result.
+- Use `inference_step1.ipynb` to generate step1 result. (public: 0.223)
+- Use `inference_step2.ipynb` to generate step2 result. (public: 0.196)
