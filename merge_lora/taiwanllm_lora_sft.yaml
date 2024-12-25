@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: yentinglin/Llama-3-Taiwan-8B-Instruct
+adapter_name_or_path: /home/ai2lab/weihua/2024_IR_Law_Project/LLaMA-Factory/saves/tw_llama/lora_step1/sft
+template: llama3
+finetuning_type: lora
+
+### export
+export_dir: models/tw_llama_step1
+export_size: 2
+export_device: cpu
+export_legacy_format: false
