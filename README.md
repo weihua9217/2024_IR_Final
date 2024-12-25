@@ -7,7 +7,7 @@ This is a repo for NTU IR Final Project
 - Our experiment was conducted on Ubuntu 24.04.1 LTS with two RTX 4090 GPUs, and Python version 3.11.10.
 
 
-# Installation & Requirement
+## Installation & Requirement
 - LLaMA-Factory
     - Please refer [here](https://github.com/hiyouga/LLaMA-Factory) to install LLaMA-Factory
 
@@ -43,7 +43,7 @@ Put all of them under data directory so you should get:
 - Using `arrage_train_step2.ipynb` to prepare Training Data for step2.
 
 
-# Training and Merge LoRA for stage 1
+## Training and Merge LoRA for stage 1
 
 - Place `law_data_step1.json` and `dataset_info.json` under your `LLaMA-Factory/data`
 - Place `train_lora/taiwanllm_lora_sft.yaml` under your `LLaMA-Factory/examples/train_lora`
@@ -55,7 +55,7 @@ llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
 llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 
-# Training and Merge LoRA for stage 2
+## Training and Merge LoRA for stage 2
 
 - Place `law_data_step2.json` under your `LLaMA-Factory/data`
 - Place `train_lora/taiwanllm_lora_sft_stage2.yaml` under your `LLaMA-Factory/examples/train_lora`
@@ -67,6 +67,6 @@ llamafactory-cli train examples/train_lora/llama3_lora_sft_stage2.yaml
 llamafactory-cli export examples/merge_lora/llama3_lora_sft_stage2.yaml
 ```
 
-# Inference
+## Inference
 - Use `inference_step1.ipynb` to generate step1 result. (public: 0.223)
 - Use `inference_step2.ipynb` to generate step2 result. (public: 0.196)
