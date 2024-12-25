@@ -1,7 +1,11 @@
 # 2024 IR Final Project
+This is a repo for NTU IR Final Project
 
-Related Laws for Legal Questions:
+- Related Laws for Legal Questions:
 [Kaggle Page](https://www.kaggle.com/competitions/ntu-csie-2024-ir-final-project/)
+
+- Our experiment was conducted on Ubuntu 24.04.1 LTS with two RTX 4090 GPUs, and Python version 3.11.10.
+
 
 # Installation & Requirement
 - LLaMA-Factory
